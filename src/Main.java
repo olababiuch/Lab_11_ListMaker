@@ -74,8 +74,8 @@ public class Main {
 
     private static void insertItem(ArrayList<String> myArrList, Scanner in) {
         String item = SafeInput.getNonZeroLenString(in, "Enter the item to insert");
-        int userIndex = SafeInput.getRangedInt(in, "Enter position to insert at (1 to " + (myArrList.size() + 1) + ")", 1, myArrList.size() + 1);
-        myArrList.add(userIndex - 1, item);  // Adjust for zero-based index
+        int userIndex = SafeInput.getRangedInt(in, "Enter position to insert at", 1, myArrList.size());
+        myArrList.add(userIndex - 1, item);
     }
 
 }
